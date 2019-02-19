@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 4 - Using jQuery Plug-ins</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="jquery-ui/css/ui-lightness/jquery-ui-1.8.18.custom.css" />
+	<script type="text/javascript" src="jQuery/jQuery.js"></script>
+	<script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.18.custom.min.js"></script>
+	
+	<script type="text/javascript" src="jquery-validate.js"></script>
+
+	<script>
+    $( function(){
+	$( 'input[type=date]').datepicker();
+	$( '#registration_form' ).validate( 
+		{ 
+			rules: {
+			first_name: 'required',
+			last_name: { required: true, minlength: 2 },
+			email: { required: true, email: true }
+
+		}, 
+			messages: {
+			first_name: 'Please enter your first name.',
+			last_name: {
+			required: 'Please enter your last name.',
+			minlength: 'Your last name must be at least 2 characters.'
+		},
+			email: {
+			required: 'Please enter your email address',
+			email: 'Please enter a valid email address'
+		}
+
+		} 
+		});
+	});
+	</script>
+	</head>
+	<body>
+
+	<form id="registration_form" action="success.html" method="post">
+	
+		<h2>Online Registration</h2>
+	
+		<div class="row">
+			<label for="cname">First Name</label>
+			<input id="first_name" name="name" minlength="2" type="text" required />
+			
+			<div class="clear"></div>
+		</div>
+		
+		<div class="row">
+			<label for="cname">Last Name</label>
+			<input id="last_name" name="name" minlength="2" type="text" required />
+			
+			<div class="clear"></div>
+		</div>
+		
+		<div class="row">
+			<label for="cname">Email</label>
+			<input id="email" name="name" minlength="2" type="email" required />
+			
+			<div class="clear"></div>
+		</div>
+		
+		<div class="row">
+			<label for="cname">Desired Dates</label>
+			<input id="date" name="name" min="00/00/0000" type="date" required />
+			
+			<div class="clear"></div>
+		</div>
+		
+		<div class="row">
+			<label>&nbsp;</label>
+			<input class="submit" type="submit" value="Register Now" />
+			
+			<div class="clear"></div>
+		</div>
+	
+	</form>
+
+</body>
+</html>

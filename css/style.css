@@ -1,0 +1,71 @@
+body
+{
+	background-image: url(http://www.godisageek.com/wp-content/uploads/Dying-Light-bg1.jpg);
+}
+.Hi
+{
+	background-image: url(https://lemonleafprints.com/images/watermarked/detailed/41/41329_Rectangle_Zombie-Party-Bar-Mitzvah-A2-Flat.jpg?t=1453126072);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-bottom: 80%;
+}
+h2
+{
+	margin: 0 0 10px 0;
+	text-align: center;
+}
+form
+{
+	margin: 50px auto 0 auto;
+	border: 1px solid #ccc;
+	width: 300px;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 2px 2px 2px #000;
+	-moz-box-shadow: 2px 2px 2px #000;
+	box-shadow: 2px 2px 2px #000;
+	background-color: red;
+	color: white;
+}
+
+	form div.row
+	{
+		margin-bottom: 4px;
+
+	}
+	
+		form div.row label
+		{
+			display: block;
+			float: left;
+			width: 96px;
+			text-align: right;
+			padding-right: 4px;
+		}
+		
+		form div.row input
+		{
+			margin: 0;
+			width: 190px;
+		}
+		
+		form div.row input.submit
+		{
+			width: auto;
+		}
+		
+		/* jquery-validate error messages */
+		form div.row label.error
+		{
+			float: none;
+			width: auto;
+			text-align: left;
+			color: #f44;
+		}
+		/* jquery-validate invalid fields */
+		form div.row input.error
+		{
+			border-color: #f44;
+		}
